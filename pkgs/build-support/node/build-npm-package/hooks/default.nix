@@ -51,4 +51,8 @@
       jq = "${jq}/bin/jq";
     };
   } ./npm-install-hook.sh;
+
+  npmAuditHook = makeSetupHook {
+    name = "npm-audit-hook";
+  } ./npm-audit-hook.sh;
 }
