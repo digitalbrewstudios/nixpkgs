@@ -4031,8 +4031,8 @@ with pkgs;
   nim-unwrapped-1 = nim-unwrapped-1_0;
   nim-unwrapped-2 = nim-unwrapped-2_2;
 
-  buildNimPackage = callPackage ../build-support/build-nim-package.nix { };
-  buildNimSbom = callPackage ../build-support/build-nim-sbom.nix { };
+  buildNimPackage = callPackage ../build-support/nim/build-nim-package.nix { };
+  buildNimSbom = callPackage ../build-support/nim/build-nim-sbom.nix { };
   nimOverrides = callPackage ./nim-overrides.nix { };
 
   nextpnrWithGui = libsForQt5.callPackage ../by-name/ne/nextpnr/package.nix {
